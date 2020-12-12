@@ -1,3 +1,5 @@
+import Section from "./Section";
+
 const Result = props => {
     const styles = {
         correct: {
@@ -10,13 +12,17 @@ const Result = props => {
     
     return props.correct === null ? null : 
             props.correct ? (
-                <div style={styles.correct}>
-                    Very Good! :)
-                </div>
+                <Section>
+                    <label style={styles.correct}>
+                        Very Good! :)
+                    </label>
+                </Section>
             ) : (
-                <div style={styles.incorrect}>
-                    Try again! :(
-                </div>
+                <Section>
+                    <label style={styles.incorrect}>
+                        Try again! :(
+                    </label>
+                </Section>
             )
 }
 

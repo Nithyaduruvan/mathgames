@@ -2,6 +2,7 @@ import { useState } from "react";
 import Answer from "./Answer";
 import Question from "./Question";
 import Result from "./Result";
+import Section from "./Section";
 
 const generateRandom = () => {
     return Math.floor(Math.random() * 100);
@@ -32,13 +33,13 @@ const Game = () => {
     }
 
     return (
-        <div>
+        <Section>
             What's the next number ??
             <Question question={question}></Question>
             <Answer text={answer} answerChanged={answerChanged} resetCallback={reset}></Answer>
             <Result correct={result}></Result>
             <input type="submit" value="Reset" onClick={reset} />
-        </div>
+        </Section>
     )
 }
 

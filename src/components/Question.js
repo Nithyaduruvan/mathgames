@@ -1,8 +1,10 @@
+import Section from "./Section"
+
 const Question = props => {
     return (
-        <div>
+        <Section>
             {props.question}
-        </div>
+        </Section>
     )
 }
 
